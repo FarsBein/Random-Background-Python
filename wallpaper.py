@@ -3,11 +3,11 @@ import os
 import random 
 import glob
 
-listOfImages = []
+listOfImages = os.listdir()
 
-for file in os.walk("."):
-    listOfImages = file[-1]
 listOfImages.remove('wallpaper.py')
+
+listOfImages.remove('.git')
 
 aRandomImage=listOfImages[random.randrange(0,len(listOfImages))]
 
